@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Träning : MonoBehaviour {
+public class Additon : MonoBehaviour {
 
     public int NumberA;
     public int NumberB;
@@ -63,13 +63,18 @@ public class Träning : MonoBehaviour {
              }
              */
         }
+
     }
+
 
     void NumberGenerator()
     {
+       
             NumberA = Random.Range(1, 20);
 
             NumberB = Random.Range(1, 20);
+        
+       
     }
     public void Additonn()
     {
@@ -94,11 +99,11 @@ public class Träning : MonoBehaviour {
                 Debug.Log(Answer);
                 hasCompleted = true;
             }
-        }   
+        }
+       
     }
     public void Multiplikation()
     {
-        //Fixa så att talen inte är för stora.
         feedbackText.text = "";
         NumberGenerator();
         while (!hasCompleted)
@@ -112,7 +117,8 @@ public class Träning : MonoBehaviour {
                 Debug.Log(Answer);
                 hasCompleted = true;
             }
-        }  
+        }
+        
     }
     public void Division()
     {
@@ -129,7 +135,8 @@ public class Träning : MonoBehaviour {
                 Debug.Log(Answer);
                 hasCompleted = true;
             }
-        }  
+        }
+        
     }
 
     public void CheackAnswer()
@@ -148,5 +155,6 @@ public class Träning : MonoBehaviour {
             input.text = "";
             hasCompleted = false;
         }
+
     }
 }
